@@ -96,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/24/hello-world/" data-id="cj6qkk1p10007lm0kzykp4r05" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/24/hello-world/" data-id="cj6ql1xqy00054p0kl8k5nig3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -132,7 +132,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/24/开始/" data-id="cj6qkk1ou0004lm0krh8g7zaz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/24/开始/" data-id="cj6ql1xr200074p0kitum5yv9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/06/pyqt编程/" data-id="cj6qkk1or0003lm0k5wa5cir2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/06/pyqt编程/" data-id="cj6ql1xqu00044p0kkzx4fni6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -187,9 +187,9 @@
 
 
   
-    <article id="post-e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-------&gt;大数据比赛" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/20/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b/" class="article-date">
+    <a href="/2017/05/20/------>大数据比赛/" class="article-date">
   <time datetime="2017-05-20T07:14:33.000Z" itemprop="datePublished">2017-05-20</time>
 </a>
     
@@ -205,7 +205,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/20/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b/">------&gt;大数据比赛</a>
+      <a class="article-title" href="/2017/05/20/------>大数据比赛/">------&gt;大数据比赛</a>
     </h1>
   
 
@@ -223,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/20/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b/" data-id="cj6qkk1ol0001lm0k45ktxheq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/20/------>大数据比赛/" data-id="cj6ql1xqf00004p0ky9p49a1f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -259,31 +259,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：</p>
-<blockquote>
-<p>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)<br>在cmd中进入Python环境，输入：</p>
-</blockquote>
-<p>[python]<br>import sys<br>sys.getdefaultencoding()<br>[/python]</p>
+        <p>在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)</div></pre></td></tr></table></figure></p>
+<p>在cmd中进入Python环境，输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.getdefaultencoding()</div></pre></td></tr></table></figure>
 <p>得到：</p>
-<p>[shell]<br>‘ascii’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'ascii'</div></pre></td></tr></table></figure>
 <p>可以看见Python默认编码格式为ascii，当读入的文字在ascii字符集之外时就会出现这样的问题，此时需要修改Python默认编码，改为utf-8。下面具体讲解。</p>
-<h1 id="查找site-packages目录"><a href="#查找site-packages目录" class="headerlink" title="查找site-packages目录"></a><strong>查找site-packages目录</strong></h1><p>在cmd中进入Python环境，输入：</p>
-<p>[python]<br>import site<br>site.getsitepackages()<br>[/python]</p>
+<h3 id="查找site-packages目录"><a href="#查找site-packages目录" class="headerlink" title="查找site-packages目录"></a><strong>查找site-packages目录</strong></h3><p>在cmd中进入Python环境，输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> site</div><div class="line">site.getsitepackages()</div></pre></td></tr></table></figure>
 <p>得到：</p>
-<p>[shell]<br>[‘/usr/local/lib/python2.7/dist-packages’, ‘/usr/lib/python2.7/dist-packages’]<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">['/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages']</div></pre></td></tr></table></figure>
 <p>具体哪一个为目录，我不是很确定，大概跟安装Python的方法有关，我建议两个都建个sitecustomize.py试试。</p>
-<h1 id="建立sitecustomize-py文件"><a href="#建立sitecustomize-py文件" class="headerlink" title="建立sitecustomize.py文件"></a><strong>建立sitecustomize.py文件</strong></h1><p>在cmd进入上面得到的文件夹下，建立sitecustomize.py文件并输入（注意启用root权限）：</p>
-<p>[python]<br>import sys<br>sys.setdefaultencoding(‘utf-8’)<br>[/python]</p>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h1><p>在cmd中重新进入Python环境，输入：</p>
-<p>[python]<br>import sys<br>sys.getdefaultencoding()<br>[/python]</p>
+<h3 id="建立sitecustomize-py文件"><a href="#建立sitecustomize-py文件" class="headerlink" title="建立sitecustomize.py文件"></a><strong>建立sitecustomize.py文件</strong></h3><p>在cmd进入上面得到的文件夹下，建立sitecustomize.py文件并输入（注意启用root权限）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.setdefaultencoding(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h3><p>在cmd中重新进入Python环境，输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.getdefaultencoding()</div></pre></td></tr></table></figure>
 <p>得到：</p>
-<p>[shell]<br>‘utf8’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'utf8'</div></pre></td></tr></table></figure>
 <p>可以看到Python默认编码已经改为utf-8。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/13/Ubuntu修改Python默认编码/" data-id="cj6qkk1od0000lm0kysfitu8w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/13/Ubuntu修改Python默认编码/" data-id="cj6ql1xqs00034p0kjpkdgm5w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -381,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/01/-->>>深度学习/" data-id="cj6qkk1ox0005lm0k3et7j4do" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/01/-->>>深度学习/" data-id="cj6ql1xql00014p0k8uevpo66" class="article-share-link">Share</a>
       
       
     </footer>
@@ -417,72 +415,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Theano安装"><a href="#Theano安装" class="headerlink" title="Theano安装"></a><strong>Theano安装</strong></h1><p>在命令行输入</p>
-<p>[shell]<br>sudo apt-get update<br>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git<br>sudo pip install Theano<br>[/shell]</p>
+        <h3 id="Theano安装"><a href="#Theano安装" class="headerlink" title="Theano安装"></a><strong>Theano安装</strong></h3><p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git</div><div class="line">sudo pip install Theano</div></pre></td></tr></table></figure>
 <p>&nbsp;</p>
 <p>测试Theano</p>
 <p>NumPy (~30s):</p>
-<p>[shell]<br>python -c &quot;import numpy; numpy.test()&quot;<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -c &amp;quot;import numpy; numpy.test()&amp;quot;</div></pre></td></tr></table></figure>
 <p>SciPy (~1m):</p>
-<p>[shell]<br>python -c &quot;import scipy; scipy.test()&quot;<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -c &amp;quot;import scipy; scipy.test()&amp;quot;</div></pre></td></tr></table></figure>
 <p>Theano (~30m):</p>
-<p>[shell]<br>python -c &quot;import theano; theano.test()&quot;<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -c &amp;quot;import theano; theano.test()&amp;quot;</div></pre></td></tr></table></figure>
 <p>如果没有error就说明Theano安装完成</p>
 <p>&nbsp;</p>
 <hr>
-<h1 id="CUDA安装"><a href="#CUDA安装" class="headerlink" title="CUDA安装"></a><strong>CUDA安装</strong></h1><p>在命令行输入</p>
-<p>[shell]<br>sudo apt-get install nvidia-352 nvidia-prime nvidia-settings<br>sudo apt-get install nvidia-cuda-toolkit<br>[/shell]</p>
+<h3 id="CUDA安装"><a href="#CUDA安装" class="headerlink" title="CUDA安装"></a><strong>CUDA安装</strong></h3><p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nvidia-352 nvidia-prime nvidia-settings</div><div class="line">sudo apt-get install nvidia-cuda-toolkit</div></pre></td></tr></table></figure>
 <p>测试</p>
-<p>[shell]<br>nvidia-smi<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvidia-smi</div></pre></td></tr></table></figure>
 <p>出现</p>
-<p>[shell]<br>NVIDIA-SMI has failed because it couldn’t communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.</div></pre></td></tr></table></figure>
 <p>同时使用</p>
-<p>[shell]<br>nvidia-settings<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvidia-settings</div></pre></td></tr></table></figure>
 <p>出现</p>
-<p>[shell]<br><strong> Message: PRIME: No offloading required. Abort
-</strong> Message: PRIME: is it supported? no<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">** Message: PRIME: No offloading required. Abort</div><div class="line">** Message: PRIME: is it supported? no</div></pre></td></tr></table></figure>
 <p>在搜了很多解决方法后发现，原因是笔记本是uefi的主版，需要进入bios禁用secureboot功能，在禁用后nvidia-smi即可正常使用。这个奇葩问题来源：<a href="http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917" target="_blank" rel="external">http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917</a></p>
 <hr>
-<h1 id="设置环境变量及测试"><a href="#设置环境变量及测试" class="headerlink" title="设置环境变量及测试"></a><strong>设置环境变量及测试</strong></h1><p>在命令行输入</p>
-<p>[shell]<br>sudo gedit ~/.bashrc<br>[/shell]</p>
+<h3 id="设置环境变量及测试"><a href="#设置环境变量及测试" class="headerlink" title="设置环境变量及测试"></a><strong>设置环境变量及测试</strong></h3><p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit ~/.bashrc</div></pre></td></tr></table></figure>
 <p>在文件最后添加</p>
-<p>[shell]<br>export PATH = &quot;/usr/lib/nvidia-cuda-toolkit/bin&quot;:$PATH<br>export LD_LIBRARY_PATH = &quot;/usr/lib/nvidia-cuda-toolkit/lib&quot;:$LD_LIBRARY_PATH<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PATH = &amp;quot;/usr/lib/nvidia-cuda-toolkit/bin&amp;quot;:$PATH</div><div class="line">export LD_LIBRARY_PATH = &amp;quot;/usr/lib/nvidia-cuda-toolkit/lib&amp;quot;:$LD_LIBRARY_PATH</div></pre></td></tr></table></figure>
 <p>在命令行输入</p>
-<p>[shell]<br>sudo gedit ~/.theanorc<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit ~/.theanorc</div></pre></td></tr></table></figure>
 <p>在文件中写入</p>
-<p>[shell]<br>[global]<br>device = gpu<br>floatX = float32</p>
-<p>[nvcc]<br>fastmath = True</p>
-<p>[cuda]<br>root = /usr/lib/nvidia-cuda-toolkit</p>
-<p>[lib]<br>cnmem = 0.8</p>
-<p>[blas]<br>ldflags = -lopenblas<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">[global]</div><div class="line">device = gpu</div><div class="line">floatX = float32</div><div class="line"></div><div class="line">[nvcc]</div><div class="line">fastmath = True</div><div class="line"></div><div class="line">[cuda]</div><div class="line">root = /usr/lib/nvidia-cuda-toolkit</div><div class="line"></div><div class="line">[lib]</div><div class="line">cnmem = 0.8</div><div class="line"></div><div class="line">[blas]</div><div class="line">ldflags = -lopenblas</div></pre></td></tr></table></figure>
 <p>测试blas加速能否正常工作</p>
-<p>[shell]<br>import numpy<br>id(numpy.dot) == id(numpy.core.multiarray.dot)<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import numpy </div><div class="line">id(numpy.dot) == id(numpy.core.multiarray.dot)</div></pre></td></tr></table></figure>
 <p>得到结果为False则说明正常加速</p>
 <p>创建一个theano_test.py文件，写入</p>
-<p>[python]<br>from theano import function, config, shared, sandbox<br>import theano.tensor as T<br>import numpy<br>import time</p>
-<p>vlen = 10 <em> 30 </em> 768 # 10 x #cores x # threads per core<br>iters = 1000<br>rng = numpy.random.RandomState(22)<br>x = shared(numpy.asarray(rng.rand(vlen), config.floatX))<br>f = function([], T.exp(x))<br>print f.maker.fgraph.toposort()</p>
-<p>t0 = time.time()<br>for i in xrange(iters):<br>    r = f()<br>t1 = time.time()</p>
-<p>print ‘Looping %d times took’ % iters, t1 - t0, ‘seconds’<br>print ‘Result is’, r<br>if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):<br>    print ‘Used the cpu’<br>else:<br>    print ‘Used the gpu’<br>[/python]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">from theano import function, config, shared, sandbox</div><div class="line">import theano.tensor as T</div><div class="line">import numpy</div><div class="line">import time</div><div class="line"></div><div class="line">vlen = 10 * 30 * 768 # 10 x #cores x # threads per core</div><div class="line">iters = 1000</div><div class="line">rng = numpy.random.RandomState(22)</div><div class="line">x = shared(numpy.asarray(rng.rand(vlen), config.floatX))</div><div class="line">f = function([], T.exp(x))</div><div class="line">print f.maker.fgraph.toposort()</div><div class="line"></div><div class="line">t0 = time.time()</div><div class="line">for i in xrange(iters):</div><div class="line">    r = f()</div><div class="line">t1 = time.time()</div><div class="line"></div><div class="line">print &apos;Looping %d times took&apos; % iters, t1 - t0, &apos;seconds&apos;</div><div class="line">print &apos;Result is&apos;, r</div><div class="line">if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):</div><div class="line">    print &apos;Used the cpu&apos;</div><div class="line">else:</div><div class="line">    print &apos;Used the gpu&apos;</div></pre></td></tr></table></figure>
 <p>&nbsp;</p>
 <p>切换到theano_test.py文件所在目录，在命令行输入</p>
-<p>[shell]<br>python theano_test.py<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python theano_test.py</div></pre></td></tr></table></figure>
 <p>出现</p>
-<p>[shell]<br>WARNING (theano.sandbox.cuda): CUDA is installed, but device gpu is not available  (error: Unable to get the number of gpus available: unknown error)<br>[Elemwise{exp,no_inplace}(&lt;TensorType(float32, vector)&gt;)]<br>Looping 1000 times took 4.377858 seconds<br>Result is [ 1.23178029  1.61879337  1.52278066 …,  2.20771813  2.29967761 1.62323284]<br>Used the cpu<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">WARNING (theano.sandbox.cuda): CUDA is installed, but device gpu is not available  (error: Unable to get the number of gpus available: unknown error)</div><div class="line">[Elemwise&#123;exp,no_inplace&#125;(&amp;lt;TensorType(float32, vector)&amp;gt;)]</div><div class="line">Looping 1000 times took 4.377858 seconds</div><div class="line">Result is [ 1.23178029  1.61879337  1.52278066 ...,  2.20771813  2.29967761 1.62323284]</div><div class="line">Used the cpu</div></pre></td></tr></table></figure>
 <div>
 
 <p>此时在命令行输入</p>
-<p>[shell]<br>sudo python theano_test.py<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo python theano_test.py</div></pre></td></tr></table></figure>
 <p></p></div><br>可正常运行，出现<p></p>
 <div>
 
-<p>[shell]<br>Using gpu device 0: GeForce 840M (CNMeM is disabled, cuDNN not available)<br>[GpuElemwise{exp,no_inplace}(&lt;CudaNdarrayType(float32, vector)&gt;), HostFromGpu(GpuElemwise{exp,no_inplace}.0)]<br>Looping 1000 times took 1.110110 seconds<br>Result is [ 1.23178029 1.61879349 1.52278066 …, 2.20771813 2.29967761 1.62323296]<br>Used the gpu<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Using gpu device 0: GeForce 840M (CNMeM is disabled, cuDNN not available)</div><div class="line">[GpuElemwise&#123;exp,no_inplace&#125;(&amp;lt;CudaNdarrayType(float32, vector)&amp;gt;), HostFromGpu(GpuElemwise&#123;exp,no_inplace&#125;.0)]</div><div class="line">Looping 1000 times took 1.110110 seconds</div><div class="line">Result is [ 1.23178029 1.61879349 1.52278066 ..., 2.20771813 2.29967761 1.62323296]</div><div class="line">Used the gpu</div></pre></td></tr></table></figure>
 <p>再次输入</p>
-<p>[shell]<br>python theano_test.py<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python theano_test.py</div></pre></td></tr></table></figure>
 <p>出现错误（省略了部分语句）</p>
-<p>[shell]<br>OSError: [Errno 13] Permission denied: ‘/home/zui/.theano/compiledir_Linux…’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">OSError: [Errno 13] Permission denied: '/home/zui/.theano/compiledir_Linux...'</div></pre></td></tr></table></figure>
 <p>此时利用rm -rf删除文件夹.theano文件夹即可</p>
 <p>再次输入</p>
-<p>[shell]<br>python theano_test.py<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python theano_test.py</div></pre></td></tr></table></figure>
 <p>可以正常运行</p>
 <p></p></div><br>之后每次重启，需要首先用root权限跑Theano代码（比如上面的theano_test.py），才能正常使用GPU，也可以选择建立一个脚本，具体参考<a href="http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/" target="_blank" rel="external">http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/</a>最后一点<p></p>
 <p>&nbsp;</p>
@@ -496,14 +486,14 @@
 <p>其他还搜了很多资料，不一一列举</p>
 <p>Tip：</p>
 <p>利用</p>
-<p>[shell]<br>lspci -k | grep -EA2 ‘VGA’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lspci -k | grep -EA2 'VGA'</div></pre></td></tr></table></figure>
 <p>查看显卡时，由于nvidia有些显卡表示为“3D控制器”，所以需要使用</p>
-<p>[shell]<br>lspci -k | grep -EA2 ‘VGA|3D’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lspci -k | grep -EA2 'VGA|3D'</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/19/ubuntu15.04+Theano+CUDA，笔记本双显卡配置/" data-id="cj6qkk1pj000dlm0kyqlhfrr3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/19/ubuntu15.04+Theano+CUDA，笔记本双显卡配置/" data-id="cj6ql1xr400094p0kcg8kso4t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -575,7 +565,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/12/20/文艺青年/" data-id="cj6qkk1pn000elm0kueyxahwv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/12/20/文艺青年/" data-id="cj6ql1xra000c4p0k6x29vhz8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -634,7 +624,7 @@
           </li>
         
           <li>
-            <a href="/2017/05/20/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b/">------&gt;大数据比赛</a>
+            <a href="/2017/05/20/------>大数据比赛/">------&gt;大数据比赛</a>
           </li>
         
           <li>

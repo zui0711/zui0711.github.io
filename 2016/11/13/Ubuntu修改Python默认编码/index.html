@@ -5,16 +5,16 @@
   
   <title>Ubuntu修改Python默认编码 | SLEEP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：  UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)在cmd中进入Python环境，输入：  [python]import syssys.getdefaultencoding">
+  <meta name="description" content="在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：1UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128) 在cmd中进入Python环境，输入： 12import syssys.getdefaultencoding() 得到：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu修改Python默认编码">
 <meta property="og:url" content="http://yoursite.com/2016/11/13/Ubuntu修改Python默认编码/index.html">
 <meta property="og:site_name" content="SLEEP">
-<meta property="og:description" content="在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：  UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)在cmd中进入Python环境，输入：  [python]import syssys.getdefaultencoding">
-<meta property="og:updated_time" content="2017-08-24T13:29:12.466Z">
+<meta property="og:description" content="在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：1UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128) 在cmd中进入Python环境，输入： 12import syssys.getdefaultencoding() 得到：">
+<meta property="og:updated_time" content="2017-08-24T15:02:32.285Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu修改Python默认编码">
-<meta name="twitter:description" content="在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：  UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)在cmd中进入Python环境，输入：  [python]import syssys.getdefaultencoding">
+<meta name="twitter:description" content="在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：1UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128) 在cmd中进入Python环境，输入： 12import syssys.getdefaultencoding() 得到：">
   
     <link rel="alternate" href="/atom.xml" title="SLEEP" type="application/atom+xml">
   
@@ -89,31 +89,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：</p>
-<blockquote>
-<p>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)<br>在cmd中进入Python环境，输入：</p>
-</blockquote>
-<p>[python]<br>import sys<br>sys.getdefaultencoding()<br>[/python]</p>
+        <p>在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)</div></pre></td></tr></table></figure></p>
+<p>在cmd中进入Python环境，输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.getdefaultencoding()</div></pre></td></tr></table></figure>
 <p>得到：</p>
-<p>[shell]<br>‘ascii’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'ascii'</div></pre></td></tr></table></figure>
 <p>可以看见Python默认编码格式为ascii，当读入的文字在ascii字符集之外时就会出现这样的问题，此时需要修改Python默认编码，改为utf-8。下面具体讲解。</p>
-<h1 id="查找site-packages目录"><a href="#查找site-packages目录" class="headerlink" title="查找site-packages目录"></a><strong>查找site-packages目录</strong></h1><p>在cmd中进入Python环境，输入：</p>
-<p>[python]<br>import site<br>site.getsitepackages()<br>[/python]</p>
+<h3 id="查找site-packages目录"><a href="#查找site-packages目录" class="headerlink" title="查找site-packages目录"></a><strong>查找site-packages目录</strong></h3><p>在cmd中进入Python环境，输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> site</div><div class="line">site.getsitepackages()</div></pre></td></tr></table></figure>
 <p>得到：</p>
-<p>[shell]<br>[‘/usr/local/lib/python2.7/dist-packages’, ‘/usr/lib/python2.7/dist-packages’]<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">['/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages']</div></pre></td></tr></table></figure>
 <p>具体哪一个为目录，我不是很确定，大概跟安装Python的方法有关，我建议两个都建个sitecustomize.py试试。</p>
-<h1 id="建立sitecustomize-py文件"><a href="#建立sitecustomize-py文件" class="headerlink" title="建立sitecustomize.py文件"></a><strong>建立sitecustomize.py文件</strong></h1><p>在cmd进入上面得到的文件夹下，建立sitecustomize.py文件并输入（注意启用root权限）：</p>
-<p>[python]<br>import sys<br>sys.setdefaultencoding(‘utf-8’)<br>[/python]</p>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h1><p>在cmd中重新进入Python环境，输入：</p>
-<p>[python]<br>import sys<br>sys.getdefaultencoding()<br>[/python]</p>
+<h3 id="建立sitecustomize-py文件"><a href="#建立sitecustomize-py文件" class="headerlink" title="建立sitecustomize.py文件"></a><strong>建立sitecustomize.py文件</strong></h3><p>在cmd进入上面得到的文件夹下，建立sitecustomize.py文件并输入（注意启用root权限）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.setdefaultencoding(<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h3><p>在cmd中重新进入Python环境，输入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.getdefaultencoding()</div></pre></td></tr></table></figure>
 <p>得到：</p>
-<p>[shell]<br>‘utf8’<br>[/shell]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">'utf8'</div></pre></td></tr></table></figure>
 <p>可以看到Python默认编码已经改为utf-8。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/13/Ubuntu修改Python默认编码/" data-id="cj6qkk1od0000lm0kysfitu8w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/13/Ubuntu修改Python默认编码/" data-id="cj6ql1xqs00034p0kjpkdgm5w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -122,7 +120,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/20/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/20/------>大数据比赛/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -190,7 +188,7 @@
           </li>
         
           <li>
-            <a href="/2017/05/20/e5-a4-a7-e6-95-b0-e6-8d-ae-e6-af-94-e8-b5-9b/">------&gt;大数据比赛</a>
+            <a href="/2017/05/20/------>大数据比赛/">------&gt;大数据比赛</a>
           </li>
         
           <li>
