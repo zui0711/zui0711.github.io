@@ -20,8 +20,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[开始]]></title>
+      <url>/2017/08/24/%E5%BC%80%E5%A7%8B/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Pyqt编程]]></title>
-      <url>/2017/08/06/pyqt-e7-bc-96-e7-a8-8b/</url>
+      <url>/2017/08/06/pyqt%E7%BC%96%E7%A8%8B/</url>
       <content type="html"><![CDATA[<p><a href="http://blog.csdn.net/Mr_Zing/article/details/46945011" target="_blank" rel="external">PyQt 分离UI主线程与工作线程</a></p>
 <p><a href="https://stackoverflow.com/questions/8356336/how-to-capture-output-of-pythons-interpreter-and-show-in-a-text-widget/21746133#21746133" target="_blank" rel="external">将系统输出显示在PyQt中</a></p>
 <p><a href="http://www.cnblogs.com/dcb3688/p/4586373.html" target="_blank" rel="external">show和exec的区别，模式与非模式</a></p>
@@ -60,7 +68,7 @@
     
     <entry>
       <title><![CDATA[Ubuntu修改Python默认编码]]></title>
-      <url>/2016/11/13/ubuntu-e4-bf-ae-e6-94-b9python-e9-bb-98-e8-ae-a4-e7-bc-96-e7-a0-81/</url>
+      <url>/2016/11/13/Ubuntu%E4%BF%AE%E6%94%B9Python%E9%BB%98%E8%AE%A4%E7%BC%96%E7%A0%81/</url>
       <content type="html"><![CDATA[<p>在安装Python包或者进行文件读取等操作的时候，可能会出现类似的编码问题：</p>
 <blockquote>
 <p>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe5 in position 108: ordinal not in range(128)<br>在cmd中进入Python环境，输入：</p>
@@ -94,7 +102,7 @@
     
     <entry>
       <title><![CDATA[-->>>深度学习]]></title>
-      <url>/2016/09/01/e6-9c-ba-e5-99-a8-e5-ad-a6-e4-b9-a0/</url>
+      <url>/2016/09/01/--%3E%3E%3E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"><![CDATA[<p>RNN入门</p>
 <p><a href="http://www.wildml.com/2015/09" target="_blank" rel="external">wildml RNN介绍及实现例子，完整实现使用theano（part1,2）</a></p>
 <p><a href="http://blog.csdn.net/heyongluoyao8/article/details/48636251" target="_blank" rel="external">循环神经网络介绍（主要wildml par1翻译）</a></p>
@@ -166,7 +174,7 @@
     
     <entry>
       <title><![CDATA[ubuntu15.04+Theano+CUDA，笔记本双显卡配置]]></title>
-      <url>/2016/07/19/ubuntu15-04theanocuda-ef-bc-8c-e7-ac-94-e8-ae-b0-e6-9c-ac-e5-8f-8c-e6-98-be-e5-8d-a1-e9-85-8d-e7-bd-ae/</url>
+      <url>/2016/07/19/ubuntu15.04+Theano+CUDA%EF%BC%8C%E7%AC%94%E8%AE%B0%E6%9C%AC%E5%8F%8C%E6%98%BE%E5%8D%A1%E9%85%8D%E7%BD%AE/</url>
       <content type="html"><![CDATA[<h1 id="Theano安装"><a href="#Theano安装" class="headerlink" title="Theano安装"></a><strong>Theano安装</strong></h1><p>在命令行输入</p>
 <p>[shell]<br>sudo apt-get update<br>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git<br>sudo pip install Theano<br>[/shell]</p>
 <p>&nbsp;</p>
@@ -262,7 +270,7 @@
     
     <entry>
       <title><![CDATA[文艺青年]]></title>
-      <url>/2014/12/20/e6-96-87-e8-89-ba-e9-9d-92-e5-b9-b4/</url>
+      <url>/2014/12/20/%E6%96%87%E8%89%BA%E9%9D%92%E5%B9%B4/</url>
       <content type="html"><![CDATA[<p>大嘴今晚又叫我一起去上自习，他这人跟其他人大多数都合不来，所以干什么事都拉我一起。人怕孤独，我感觉自己还是很懂他的。</p>
 <p>&nbsp;</p>
 <p>大嘴是个高冷的文艺青年，按他自己说，正儿八经的文青都是高冷的，现在一天到晚打着为文的名义抒发自己的九曲回肠的，八成都是伪文青。至于他这高冷的性格怎么就看上我了，我也不懂。</p>
