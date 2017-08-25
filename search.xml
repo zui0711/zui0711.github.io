@@ -20,14 +20,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[开始]]></title>
-      <url>/2017/08/24/%E5%BC%80%E5%A7%8B/</url>
-      <content type="html"></content>
-      
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Pyqt编程]]></title>
       <url>/2017/08/06/pyqt%E7%BC%96%E7%A8%8B/</url>
       <content type="html"><![CDATA[<p><a href="http://blog.csdn.net/Mr_Zing/article/details/46945011" target="_blank" rel="external">PyQt 分离UI主线程与工作线程</a></p>
@@ -48,7 +40,7 @@
     
     <entry>
       <title><![CDATA[------>大数据比赛]]></title>
-      <url>/2017/05/20/------%3E%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%AF%94%E8%B5%9B/</url>
+      <url>/2017/05/20/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%AF%94%E8%B5%9B/</url>
       <content type="html"><![CDATA[<p><a href="https://dnc1994.com/2016/04/rank-10-percent-in-first-kaggle-competition/" target="_blank" rel="external">如何在 Kaggle 首战中进入前 10%</a></p>
 <p><a href="http://scarletpan.github.io/summary-of-get-a-silver-medal-in-kaggle/" target="_blank" rel="external">第一次参加Kaggle拿银总结</a></p>
 <p><a href="https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/" target="_blank" rel="external">XGBoost参数调优完全指南</a></p>
@@ -100,7 +92,7 @@
     
     <entry>
       <title><![CDATA[-->>>深度学习]]></title>
-      <url>/2016/09/01/--%3E%3E%3E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
+      <url>/2016/09/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"><![CDATA[<p>RNN入门</p>
 <p><a href="http://www.wildml.com/2015/09" target="_blank" rel="external">wildml RNN介绍及实现例子，完整实现使用theano（part1,2）</a></p>
 <p><a href="http://blog.csdn.net/heyongluoyao8/article/details/48636251" target="_blank" rel="external">循环神经网络介绍（主要wildml par1翻译）</a></p>
