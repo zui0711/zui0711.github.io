@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ubuntu15.04+Theano+CUDA，笔记本双显卡配置 | SLEEP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Theano安装在命令行输入 123sudo apt-get updatesudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev gitsudo pip install Theano &amp;nbsp; 测试Theano NumPy (~30s): 1pyth">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu15.04+Theano+CUDA，笔记本双显卡配置">
+<meta property="og:url" content="http://yoursite.com/2016/07/19/ubuntu15.04+Theano+CUDA，笔记本双显卡配置/index.html">
+<meta property="og:site_name" content="SLEEP">
+<meta property="og:description" content="Theano安装在命令行输入 123sudo apt-get updatesudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev gitsudo pip install Theano &amp;nbsp; 测试Theano NumPy (~30s): 1pyth">
+<meta property="og:updated_time" content="2017-08-24T15:07:29.642Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu15.04+Theano+CUDA，笔记本双显卡配置">
+<meta name="twitter:description" content="Theano安装在命令行输入 123sudo apt-get updatesudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev gitsudo pip install Theano &amp;nbsp; 测试Theano NumPy (~30s): 1pyth">
+  
+    <link rel="alternate" href="/atom.xml" title="SLEEP" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SLEEP</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ubuntu15.04+Theano+CUDA，笔记本双显卡配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/19/ubuntu15.04+Theano+CUDA，笔记本双显卡配置/" class="article-date">
+  <time datetime="2016-07-18T16:03:32.000Z" itemprop="datePublished">2016-07-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技/">技</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ubuntu15.04+Theano+CUDA，笔记本双显卡配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Theano安装"><a href="#Theano安装" class="headerlink" title="Theano安装"></a><strong>Theano安装</strong></h3><p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git</div><div class="line">sudo pip install Theano</div></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>测试Theano</p>
+<p>NumPy (~30s):</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -c &amp;quot;import numpy; numpy.test()&amp;quot;</div></pre></td></tr></table></figure>
+<p>SciPy (~1m):</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -c &amp;quot;import scipy; scipy.test()&amp;quot;</div></pre></td></tr></table></figure>
+<p>Theano (~30m):</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -c &amp;quot;import theano; theano.test()&amp;quot;</div></pre></td></tr></table></figure>
+<p>如果没有error就说明Theano安装完成</p>
+<p>&nbsp;</p>
+<hr>
+<h3 id="CUDA安装"><a href="#CUDA安装" class="headerlink" title="CUDA安装"></a><strong>CUDA安装</strong></h3><p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nvidia-352 nvidia-prime nvidia-settings</div><div class="line">sudo apt-get install nvidia-cuda-toolkit</div></pre></td></tr></table></figure>
+<p>测试</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvidia-smi</div></pre></td></tr></table></figure>
+<p>出现</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.</div></pre></td></tr></table></figure>
+<p>同时使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvidia-settings</div></pre></td></tr></table></figure>
+<p>出现</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">** Message: PRIME: No offloading required. Abort</div><div class="line">** Message: PRIME: is it supported? no</div></pre></td></tr></table></figure>
+<p>在搜了很多解决方法后发现，原因是笔记本是uefi的主版，需要进入bios禁用secureboot功能，在禁用后nvidia-smi即可正常使用。这个奇葩问题来源：<a href="http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917" target="_blank" rel="external">http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917</a></p>
+<hr>
+<h3 id="设置环境变量及测试"><a href="#设置环境变量及测试" class="headerlink" title="设置环境变量及测试"></a><strong>设置环境变量及测试</strong></h3><p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit ~/.bashrc</div></pre></td></tr></table></figure>
+<p>在文件最后添加</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PATH = &amp;quot;/usr/lib/nvidia-cuda-toolkit/bin&amp;quot;:$PATH</div><div class="line">export LD_LIBRARY_PATH = &amp;quot;/usr/lib/nvidia-cuda-toolkit/lib&amp;quot;:$LD_LIBRARY_PATH</div></pre></td></tr></table></figure>
+<p>在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit ~/.theanorc</div></pre></td></tr></table></figure>
+<p>在文件中写入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">[global]</div><div class="line">device = gpu</div><div class="line">floatX = float32</div><div class="line"></div><div class="line">[nvcc]</div><div class="line">fastmath = True</div><div class="line"></div><div class="line">[cuda]</div><div class="line">root = /usr/lib/nvidia-cuda-toolkit</div><div class="line"></div><div class="line">[lib]</div><div class="line">cnmem = 0.8</div><div class="line"></div><div class="line">[blas]</div><div class="line">ldflags = -lopenblas</div></pre></td></tr></table></figure>
+<p>测试blas加速能否正常工作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import numpy </div><div class="line">id(numpy.dot) == id(numpy.core.multiarray.dot)</div></pre></td></tr></table></figure>
+<p>得到结果为False则说明正常加速</p>
+<p>创建一个theano_test.py文件，写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">from theano import function, config, shared, sandbox</div><div class="line">import theano.tensor as T</div><div class="line">import numpy</div><div class="line">import time</div><div class="line"></div><div class="line">vlen = 10 * 30 * 768 # 10 x #cores x # threads per core</div><div class="line">iters = 1000</div><div class="line">rng = numpy.random.RandomState(22)</div><div class="line">x = shared(numpy.asarray(rng.rand(vlen), config.floatX))</div><div class="line">f = function([], T.exp(x))</div><div class="line">print f.maker.fgraph.toposort()</div><div class="line"></div><div class="line">t0 = time.time()</div><div class="line">for i in xrange(iters):</div><div class="line">    r = f()</div><div class="line">t1 = time.time()</div><div class="line"></div><div class="line">print &apos;Looping %d times took&apos; % iters, t1 - t0, &apos;seconds&apos;</div><div class="line">print &apos;Result is&apos;, r</div><div class="line">if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):</div><div class="line">    print &apos;Used the cpu&apos;</div><div class="line">else:</div><div class="line">    print &apos;Used the gpu&apos;</div></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>切换到theano_test.py文件所在目录，在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python theano_test.py</div></pre></td></tr></table></figure>
+<p>出现</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">WARNING (theano.sandbox.cuda): CUDA is installed, but device gpu is not available  (error: Unable to get the number of gpus available: unknown error)</div><div class="line">[Elemwise&#123;exp,no_inplace&#125;(&amp;lt;TensorType(float32, vector)&amp;gt;)]</div><div class="line">Looping 1000 times took 4.377858 seconds</div><div class="line">Result is [ 1.23178029  1.61879337  1.52278066 ...,  2.20771813  2.29967761 1.62323284]</div><div class="line">Used the cpu</div></pre></td></tr></table></figure>
+<div>
+
+<p>此时在命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo python theano_test.py</div></pre></td></tr></table></figure>
+<p></p></div><br>可正常运行，出现<p></p>
+<div>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Using gpu device 0: GeForce 840M (CNMeM is disabled, cuDNN not available)</div><div class="line">[GpuElemwise&#123;exp,no_inplace&#125;(&amp;lt;CudaNdarrayType(float32, vector)&amp;gt;), HostFromGpu(GpuElemwise&#123;exp,no_inplace&#125;.0)]</div><div class="line">Looping 1000 times took 1.110110 seconds</div><div class="line">Result is [ 1.23178029 1.61879349 1.52278066 ..., 2.20771813 2.29967761 1.62323296]</div><div class="line">Used the gpu</div></pre></td></tr></table></figure>
+<p>再次输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python theano_test.py</div></pre></td></tr></table></figure>
+<p>出现错误（省略了部分语句）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">OSError: [Errno 13] Permission denied: '/home/zui/.theano/compiledir_Linux...'</div></pre></td></tr></table></figure>
+<p>此时利用rm -rf删除文件夹.theano文件夹即可</p>
+<p>再次输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python theano_test.py</div></pre></td></tr></table></figure>
+<p>可以正常运行</p>
+<p></p></div><br>之后每次重启，需要首先用root权限跑Theano代码（比如上面的theano_test.py），才能正常使用GPU，也可以选择建立一个脚本，具体参考<a href="http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/" target="_blank" rel="external">http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/</a>最后一点<p></p>
+<p>&nbsp;</p>
+<p>参考：</p>
+<p><a href="http://deeplearning.net/software/theano/install.html" target="_blank" rel="external">http://deeplearning.net/software/theano/install.html</a></p>
+<p><a href="http://deeplearning.net/software/theano/install_ubuntu.html" target="_blank" rel="external">http://deeplearning.net/software/theano/install_ubuntu.html</a></p>
+<p><a href="http://deeplearning.net/software/theano/install.html" target="_blank" rel="external">l</a><a href="http://www.cnblogs.com/Ponys/p/3438491.html" target="_blank" rel="external">http://www.cnblogs.com/Ponys/p/3438491.html</a></p>
+<p><a href="http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/" target="_blank" rel="external">http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/</a></p>
+<p><a href="https://groups.google.com/forum/#!topic/theano-users/_Zd4kdkYlcQ" target="_blank" rel="external">https://groups.google.com/forum/#!topic/theano-users/_Zd4kdkYlcQ</a></p>
+<p><a href="http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917" target="_blank" rel="external">http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917</a></p>
+<p>其他还搜了很多资料，不一一列举</p>
+<p>Tip：</p>
+<p>利用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lspci -k | grep -EA2 'VGA'</div></pre></td></tr></table></figure>
+<p>查看显卡时，由于nvidia有些显卡表示为“3D控制器”，所以需要使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lspci -k | grep -EA2 'VGA|3D'</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/19/ubuntu15.04+Theano+CUDA，笔记本双显卡配置/" data-id="cj6ramoaa0007250kff7o5dfs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/01/深度学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          --&gt;&gt;&gt;深度学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/20/文艺青年/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">文艺青年</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技/">技</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/文/">文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/未分类/">未分类</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/25/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/06/pyqt编程/">Pyqt编程</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/20/大数据比赛/">------&gt;大数据比赛</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/13/Ubuntu修改Python默认编码/">Ubuntu修改Python默认编码</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/01/深度学习/">--&gt;&gt;&gt;深度学习</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
