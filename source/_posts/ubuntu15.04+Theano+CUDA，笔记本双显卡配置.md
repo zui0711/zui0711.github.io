@@ -7,7 +7,7 @@ date: 2016-07-19 00:03:32
 tags:
 ---
 
-### **Theano安装**
+## **Theano安装**
 
 在命令行输入
 
@@ -24,28 +24,26 @@ sudo pip install Theano
 NumPy (~30s):
 
 ```shell
-python -c &quot;import numpy; numpy.test()&quot;
+python -c "import numpy; numpy.test()"
 ```
 
 SciPy (~1m):
 
 ```shell
-python -c &quot;import scipy; scipy.test()&quot;
+python -c "import scipy; scipy.test()"
 ```
 
 Theano (~30m):
 
 ```shell
-python -c &quot;import theano; theano.test()&quot;
+python -c "import theano; theano.test()"
 ```
 
 如果没有error就说明Theano安装完成
 
 &nbsp;
 
-* * *
-
-### **CUDA安装**
+## **CUDA安装**
 
 在命令行输入
 
@@ -81,9 +79,8 @@ nvidia-settings
 
 在搜了很多解决方法后发现，原因是笔记本是uefi的主版，需要进入bios禁用secureboot功能，在禁用后nvidia-smi即可正常使用。这个奇葩问题来源：[http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917](http://forum.ubuntu.org.cn/viewtopic.php?f=42&amp;t=477917)
 
-* * *
 
-### **设置环境变量及测试**
+## **设置环境变量及测试**
 
 在命令行输入
 
@@ -94,8 +91,8 @@ sudo gedit ~/.bashrc
 在文件最后添加
 
 ```shell
-export PATH = &quot;/usr/lib/nvidia-cuda-toolkit/bin&quot;:$PATH
-export LD_LIBRARY_PATH = &quot;/usr/lib/nvidia-cuda-toolkit/lib&quot;:$LD_LIBRARY_PATH
+export PATH = "/usr/lib/nvidia-cuda-toolkit/bin":$PATH
+export LD_LIBRARY_PATH = "/usr/lib/nvidia-cuda-toolkit/lib":$LD_LIBRARY_PATH
 ```
 
 在命令行输入
@@ -127,8 +124,8 @@ ldflags = -lopenblas
 测试blas加速能否正常工作
 
 ```shell
-import numpy 
-id(numpy.dot) == id(numpy.core.multiarray.dot) 
+import numpy
+id(numpy.dot) == id(numpy.core.multiarray.dot)
 ```
 
 得到结果为False则说明正常加速
@@ -161,7 +158,6 @@ else:
     print 'Used the gpu'
 ```
 
-&nbsp;
 
 切换到theano_test.py文件所在目录，在命令行输入
 
@@ -173,13 +169,12 @@ python theano_test.py
 
 ```shell
 WARNING (theano.sandbox.cuda): CUDA is installed, but device gpu is not available  (error: Unable to get the number of gpus available: unknown error)
-[Elemwise{exp,no_inplace}(&lt;TensorType(float32, vector)&gt;)]
+[Elemwise{exp,no_inplace}(TensorType(float32, vector))]
 Looping 1000 times took 4.377858 seconds
 Result is [ 1.23178029  1.61879337  1.52278066 ...,  2.20771813  2.29967761 1.62323284]
 Used the cpu
 ```
 
-<div>
 
 此时在命令行输入
 
@@ -187,13 +182,12 @@ Used the cpu
 sudo python theano_test.py
 ```
 
-</div>
 可正常运行，出现
-<div>
+
 
 ```shell
 Using gpu device 0: GeForce 840M (CNMeM is disabled, cuDNN not available)
-[GpuElemwise{exp,no_inplace}(&lt;CudaNdarrayType(float32, vector)&gt;), HostFromGpu(GpuElemwise{exp,no_inplace}.0)]
+[GpuElemwise{exp,no_inplace}(CudaNdarrayType(float32, vector)), HostFromGpu(GpuElemwise{exp,no_inplace}.0)]
 Looping 1000 times took 1.110110 seconds
 Result is [ 1.23178029 1.61879349 1.52278066 ..., 2.20771813 2.29967761 1.62323296]
 Used the gpu
@@ -221,8 +215,9 @@ python theano_test.py
 
 可以正常运行
 
-</div>
-之后每次重启，需要首先用root权限跑Theano代码（比如上面的theano_test.py），才能正常使用GPU，也可以选择建立一个脚本，具体参考[http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/](http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/)最后一点
+之后每次重启，需要首先用root权限跑Theano代码（比如上面的theano_test.py），才能正常使用GPU，也可以选择建立一个脚本，具体参考
+[http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/](http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/)
+最后一点
 
 &nbsp;
 
@@ -232,7 +227,7 @@ python theano_test.py
 
 [http://deeplearning.net/software/theano/install_ubuntu.html](http://deeplearning.net/software/theano/install_ubuntu.html)
 
-[l](http://deeplearning.net/software/theano/install.html)[http://www.cnblogs.com/Ponys/p/3438491.html](http://www.cnblogs.com/Ponys/p/3438491.html)
+[http://www.cnblogs.com/Ponys/p/3438491.html](http://www.cnblogs.com/Ponys/p/3438491.html)
 
 [http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/](http://www.johnwittenauer.net/configuring-theano-for-high-performance-deep-learning/)
 
